@@ -3,7 +3,7 @@ var initialState = [
     {
         id: 1,
         name : 'Iphone X',
-        image : '//cdn.fptshop.com.vn/Uploads/Originals/2017/12/8/636483223586180190_1.jpg',
+        image : '/img/images/636483223586180190_1.jpg',
         description : 'Apple',
         price : 500,
         inventory : 10,
@@ -12,7 +12,7 @@ var initialState = [
     {
         id: 2,
         name : 'Samsung Galaxy S9',
-        image : '//cdn.fptshop.com.vn/Uploads/Originals/2018/2/26/636552331208636703_1.jpg',
+        image : '/img/images/636552331208636703_1.jpg',
         description : 'Samsung',
         price : 400,
         inventory : 15,
@@ -21,7 +21,7 @@ var initialState = [
     {
         id: 3,
         name : 'Oppo F1s',
-        image : '//cdn.fptshop.com.vn/Uploads/Originals/2018/5/2/636608712721308701_1.jpg',
+        image : '/img/images/636608712721308701_1.jpg',
         description : 'Oppo F7s',
         price : 200,
         inventory : 5,

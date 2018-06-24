@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as messages from './../constants/Message';
 
 class Product extends Component {
     render() {
@@ -29,7 +30,12 @@ class Product extends Component {
                     <div className="card-footer">
                         <span className="left">{product.price}$</span>
                         <span className="right">
-                        <a className="btn-floating blue-gradient" data-toggle="tooltip" data-placement="top" data-original-title="Add to Cart">
+                        <a className="btn-floating blue-gradient" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            data-original-title="Add to Cart"
+                            onClick={() => this.addToCart(product)}
+                            >
                             <i className="fa fa-shopping-cart" />
                         </a>
                         </span>
@@ -40,7 +46,7 @@ class Product extends Component {
         );
     }
 
-    showStar(star) {
+    showStar = (star) => {
         var result = [];
         for(var i = 1; i <= star; i++){
             result.push(<i key={i} className="fa fa-star"></i>);
@@ -49,6 +55,11 @@ class Product extends Component {
             result.push(<i key={j+10} className="fa fa-star-o"></i>);
         }
         return result;
+    }
+
+    addToCart = product => {
+        this.props.addToCart(product);
+        this.props.onChangeMessage(messages.MSG_ADD_TO_CART_SUCCESS);
     }
 }
 
